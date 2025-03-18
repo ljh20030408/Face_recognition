@@ -1,0 +1,149 @@
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background-color: #f5f5f5;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #c8c8c8;
+}
+
+[v-cloak] {
+    opacity: 0 !important;
+}
+
+#app {
+    margin: 0 auto;
+    max-width:800px;
+}
+.Camera-wrapper{
+    margin:1em auto;
+    position: relative;
+    overflow: hidden;
+}
+.van-circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.canvas-wrapper {
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.canvas-wrapper>video {
+    background: #000;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.canvas-wrapper>canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.videoDialog .van-dialog__message {
+    line-height: 1;
+    white-space: unset;
+}
+.FlipHorizontal-toggle{
+    right:10vw;
+}
+.Camera-toggle{
+    left:10vw;
+}
+.FlipHorizontal-toggle,
+.Camera-toggle {
+    position: fixed;
+    bottom: 5vh;
+    width: 15vw;
+    height: 15vw;
+    max-width: 50px;
+    max-height: 50px;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20vw;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+.FlipHorizontal-toggle>svg,
+.Camera-toggle>svg {
+    width: 7vw;
+    max-width: 30px;
+    transition: 0.5s;
+    transform:scaleX(1);
+}
+.FlipHorizontalIng>svg{
+    transform:scaleX(-1);
+}
+.btn-operate{
+    text-align: center;
+    padding:15px;
+}
+.btn-operate>button{
+    min-width:160px;
+    border-radius:5px;
+}
+.prompt-text{
+    padding:15px;
+    color: #000;
+    margin-top: 1em;
+}
+.prompt-text>h5{
+    opacity:0.9;
+    padding-bottom: 1em;
+}
+.prompt-text>ol{
+    opacity: 0.7;
+    list-style: revert;
+    font-size: 13px;
+    line-height: 1.7;
+    padding-left: 1em;
+}
+.van-notice-bar{
+    width: 60%;
+    margin: 1em auto 0 auto;
+    border-radius: 100px;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+}
+.van-notice-bar .van-notice-bar__content,
+.van-notice-bar .van-swipe-item{
+    width:100%;
+}
+.notice-swipe {
+    height: 40px;
+    line-height: 40px;
+}
